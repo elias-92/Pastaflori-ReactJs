@@ -1,3 +1,4 @@
+import { CartWidget } from '../CartWidget';
 import styles from './header.module.css';
 
 export const Header = () => {
@@ -36,14 +37,7 @@ export const Header = () => {
 						</a>
 					</li>
 				</ul>
-				<div>
-					<img
-						className={styles.shoppingCart}
-						src={`${process.env.PUBLIC_URL}/assets/images/shopping-cart.svg`}
-						alt="shopping cart"
-					/>
-					<span>2</span>
-				</div>
+				<CartWidget />
 			</div>
 		</nav>
 	);
