@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 20px;
+	background: #edacdf;
+	background: linear-gradient(0deg, #edacdf 0%, #f166cd 50%, #943982 100%);
+}
+.logo {
+	width: 60px;
+}
+.navUl {
+	display: flex;
+}
+.navItem {
+	list-style: none;
+	padding: 0 10px;
+}
+.navLink {
+	font-size: 18px;
+	color: #fff;
+	text-decoration: none;
+}
