@@ -3,7 +3,6 @@ import {NavLink} from 'react-router-dom';
 import styles from './itemCard.module.css';
 
 export const ItemCard = ({item}) => {
-	console.log('desde cartwidget', item);
 	const {name, description, price, id, img} = item;
 
 	return (
