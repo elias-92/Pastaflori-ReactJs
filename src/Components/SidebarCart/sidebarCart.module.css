@@ -1,27 +1,64 @@
 .sidebar {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 20vw;
-	background-color: #708aff;
-	padding: 2rem;
-	z-index: 1;
-	height: 100vh;
-	transition: all 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fa93d8;
+    padding: 2rem;
+    z-index: 1;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
 }
-.close-button-container {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	width: 100%;
+.closeButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
 }
-.close-button {
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-	background: transparent;
-	border: none;
-	color: #ffffff;
-	font-size: 1.2rem;
-	font-weight: bold;
+.closeButton {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1rem 0;
+    height: 88%;
+}
+
+.total{
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 2px;
+}
+
+.buttonCart {
+    cursor: pointer;
+    background-color: #dad7d7;
+    border: 1px solid #212121;
+    padding: 1.2rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #4b4449;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttonCart:hover {
+    background-color: #f45ac1;
+    color: #f0f0f0;
+    border: 1px solid #fff;
 }

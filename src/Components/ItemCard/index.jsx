@@ -1,23 +1,53 @@
 import {React} from 'react';
-import {NavLink} from 'react-router-dom';
 import styles from './itemCard.module.css';
 
-export const ItemCard = ({item}) => {
-	const {name, description, price, id, img} = item;
-
+export const ItemCard = ({
+	item,
+	onSelect,
+	type = 'vCard',
+	descreaseQty,
+	increaseQty,
+	numberOfItem,
+}) => {
+	const {id, description, image, name, price, stock} = item || {};
 	return (
-		<>
-			<div className={styles.card}>
-				<img src={img} alt={name} className={styles.cardImg}  />
-				<div className={styles.contenidoCard} key={id}>
-					<h3 className={styles.titleCards}>{name}</h3>
-					<p className="card-text">{description}</p>
-					<p className="card-text">$ {price}</p>
-					<NavLink to={`${id}`}>
-						<label className="btn btn-primary">More details</label>
-					</NavLink>
-				</div>
+		<div
+			className={type === 'vCard' ? styles.card : styles.cardMax}
+			onClick={() => onSelect(item)}
+		>
+			<img className={styles.cardImage} src={image} alt={name} />
+			<div className={styles.cardContent}>
+				<h3 className={styles.cardName}>{name}</h3>
+				<p className={styles.cardDescription}>{description}</p>
+				<p className={styles.cardPrice}>${price}</p>
+				<p className={styles.cardStock}>
+					<b>{stock}</b> in stock
+				</p>
 			</div>
-		</>
+			{type === 'mCard' && (
+				<div className={styles.cardButtonContainer}>
+					<button
+						disabled={numberOfItem === 0}
+						onClick={() => descreaseQty(id)}
+						className={styles.cardButtonMinus}
+					>
+						-
+					</button>
+					<input
+						disabled
+						className={styles.cardInput}
+						type="text"
+						value={numberOfItem}
+					/>
+					<button
+						onClick={() => increaseQty(id)}
+						className={styles.cardButtonPlus}
+						disabled={numberOfItem === stock}
+					>
+						+
+					</button>
+				</div>
+			)}
+		</div>
 	);
 };
