@@ -8,7 +8,7 @@ import {firebaseServices} from '../../services/firebase';
 const {createOrder} = firebaseServices;
 
 export const Cart = () => {
-	const {cart, total, onRemoveItem} = useContext(CartContext);
+	const {cart, total, onRemoveItem, clearCart} = useContext(CartContext);
 	const [orderResult, setOrderResult] = useState();
 	const onHandlerOrder = async () => {
 		const newOrder = {
@@ -42,6 +42,7 @@ export const Cart = () => {
 		};
 		const result = await createOrder(newOrder);
 		setOrderResult(result);
+		clearCart();
 	};
 	console.log('orderResult', orderResult);
 	return (

@@ -41,7 +41,6 @@ export const firebaseServices = {
 		const orderCollection = collection(db, 'orders');
 		return addDoc(orderCollection, order)
 			.then((docRef) => {
-				console.log('Document written with ID: ', docRef.id);
 				return docRef.id;
 			})
 			.catch((error) => {
