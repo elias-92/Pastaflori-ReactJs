@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Pastaflori-ReactJs/static/css/main.aa86ab02.css",
+    "main.js": "/Pastaflori-ReactJs/static/js/main.c93c5583.js",
+    "static/js/787.5480e000.chunk.js": "/Pastaflori-ReactJs/static/js/787.5480e000.chunk.js",
+    "index.html": "/Pastaflori-ReactJs/index.html",
+    "main.aa86ab02.css.map": "/Pastaflori-ReactJs/static/css/main.aa86ab02.css.map",
+    "main.c93c5583.js.map": "/Pastaflori-ReactJs/static/js/main.c93c5583.js.map",
+    "787.5480e000.chunk.js.map": "/Pastaflori-ReactJs/static/js/787.5480e000.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa86ab02.css",
+    "static/js/main.c93c5583.js"
+  ]
+}
